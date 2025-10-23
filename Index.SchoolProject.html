@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Sunnydale</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            background-color: #c2b939;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky; /* Mantém o cabeçalho fixo no topo */
+            top: 0;
+            z-index: 1000; /* Garante que o cabeçalho fique acima da barra lateral */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 500; /* A barra lateral fica abaixo do cabeçalho */
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            color: #1E90FF;
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .sidebar a:hover {
+            color: #c2b939;
+        }
+        .dark-mode-btn {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #c2b939;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+        }
+        .dark-mode-btn:hover {
+            background-color: #c2b939;
+        }
+        main {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #c2b939;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .date {
+            font-weight: bold;
+            color: #c2b939;
+        }
+        .section {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #f9f9f9;
+        }
+        .dark-mode header {
+            background-color: #333;
+        }
+        .dark-mode .sidebar {
+            background-color: #333;
+            color: #f9f9f9;
+        }
+        .dark-mode .sidebar a {
+            color: #f9f9f9;
+        }
+        .dark-mode .sidebar a:hover {
+            color: #c2b939;
+        }
+        .dark-mode .dark-mode-btn {
+            background-color: #555;
+            color: #f9f9f9;
+        }
+        .dark-mode .dark-mode-btn:hover {
+            background-color: #777;
+        }
+        .dark-mode .section {
+            background-color: #1E1E1E;
+            color: #f9f9f9;
+        }
+        .dark-mode footer {
+            background-color: #333;
+            color: #f9f9f9;
+        }
+    </style>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Escola Sunnydale</h1>
+</header>
+
+<div class="sidebar">
+    <h2>Menu</h2>
+    <a href="#mission">Missão</a>
+    <a href="#events">Eventos</a>
+    <a href="#contact">Contato</a>
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">Modo Escuro</button>
+</div>
+
+<main>
+    <section id="mission">
+        <h2>Declaração de Missão</h2>
+        <p>Na Escola Sunnydale, estamos comprometidos em nutrir um amor pelo aprendizado ao longo da vida em cada aluno. Nossa missão é fornecer um ambiente seguro, inclusivo e estimulante onde os alunos possam alcançar excelência acadêmica, desenvolver habilidades de pensamento crítico e crescer como cidadãos globais compassivos e responsáveis.</p>
+        <p>Acreditamos em fomentar a criatividade, a colaboração e a resiliência por meio de um currículo abrangente que inclui acadêmicos, artes, esportes e engajamento comunitário. Nossos educadores dedicados trabalham em estreita colaboração com os alunos e suas famílias para garantir que cada criança alcance seu pleno potencial e esteja preparada para os desafios do futuro.</p>
+    </section>
+    
+    <section id="events">
+        <h2>Próximos Eventos</h2>
+        <ul>
+            <li>Feira de Ciências - <span class="date">10 de junho</span></li>
+            <li>Exposição de Arte - <span class="date">15 de junho</span></li>
+            <li>Dia dos Esportes - <span class="date">20 de junho</span></li>
+        </ul>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>Entre em Contato</h2>
+        <p>Email: <a href="mailto:info@sunnydaleschool.com" onclick="alert('Obrigado por entrar em contato!')">info@sunnydaleschool.com</a></p>
+        <p>Telefone: <a href="tel:5551234" onclick="alert('Obrigado por entrar em contato!')">555-1234</a></p>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Escola Sunnydale. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
